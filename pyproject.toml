@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "market-signal-lab"
+version = "0.1.0"
+requires-python = ">=3.11"
+description = "Auditable chronological research and C++ execution laboratory"
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+[tool.setuptools.packages.find]
+include = ["research*", "paper*", "reporting*"]
+[tool.black]
+line-length = 100

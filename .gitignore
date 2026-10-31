@@ -1,0 +1,18 @@
+.venv/
+build/
+__pycache__/
+.pytest_cache/
+data/raw/
+data/processed/
+artifacts/
+
+data/cache/
+
+# Local machine files and credentials
+.DS_Store
+.env
+.env.*
+!.env.example
+
+# Private development notes (not part of the published project)
+.local/

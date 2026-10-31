@@ -1,0 +1,17 @@
+name: offline-integrity
+on: [push, pull_request]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: make setup
+      - run: make test
+      - run: make demo RUN=ci
+      - uses: actions/upload-artifact@v4
+        with:
+          name: synthetic-research
+          path: artifacts/ci/
